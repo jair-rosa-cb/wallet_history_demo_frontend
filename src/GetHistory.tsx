@@ -15,6 +15,8 @@ export default function GetHistory(): React.JSX.Element {
   const [wAddress, setWAddress] = useState('');
   const [network, setNetwork] = useState(networks[0]);
 
+  console.log('import.meta.env.VITE_APP_BACKEND_URL', import.meta.env.VITE_APP_BACKEND_URL);
+
   const { mutate: fetchHistory, isPending, data } = useMutation({
     mutationKey: ['walletHistory'],
     mutationFn: async () =>
