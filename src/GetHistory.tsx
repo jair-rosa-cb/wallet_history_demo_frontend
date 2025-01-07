@@ -35,6 +35,7 @@ export default function GetHistory(): React.JSX.Element {
     try {
       e.preventDefault();
 
+      console.log('import.meta.env.VITE_APP_BACKEND_URL2', import.meta.env.VITE_APP_BACKEND_URL);
       fetchHistory();
     } catch (err) {
         toast.error("Something went wrong!")
